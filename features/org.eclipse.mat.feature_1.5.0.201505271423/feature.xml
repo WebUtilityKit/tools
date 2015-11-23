@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.mat.feature"
+      label="%featureName"
+      version="1.5.0.201505271423"
+      provider-name="%providerName"
+      plugin="org.eclipse.mat.api">
+   <install-handler/>
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <url>
+      <update label="%updateSiteName" url="http://download.eclipse.org/mat/1.4/update-site/"/>
+   </url>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime" version="3.3.100" match="greaterOrEqual"/>
+      <import plugin="com.ibm.icu"/>
+      <import plugin="org.eclipse.core.resources" version="3.3.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.filesystem" version="1.1.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui" version="3.3.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.ide" version="3.3.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.views" version="3.2.100" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jface.text" version="3.3.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.cheatsheets" version="3.3.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.forms" version="3.3.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.help" version="3.3.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.help.base" version="3.3.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.help.ui" version="3.3.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.help.webapp" version="3.3.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.jobs"/>
+      <import plugin="org.eclipse.text"/>
+   </requires>
+
+   <plugin
+         id="org.eclipse.mat.report"
+         download-size="336"
+         install-size="650"
+         version="1.5.0.201505271423"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.mat.api"
+         download-size="765"
+         install-size="1578"
+         version="1.5.0.201505271423"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.mat.hprof"
+         download-size="82"
+         install-size="160"
+         version="1.5.0.201505271423"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.mat.parser"
+         download-size="357"
+         install-size="741"
+         version="1.5.0.201505271423"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.mat.ui"
+         download-size="856"
+         install-size="1771"
+         version="1.5.0.201505271423"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.mat.ui.help"
+         download-size="7497"
+         install-size="33769"
+         version="1.5.0.201505271423"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.mat.jdt"
+         download-size="19"
+         install-size="32"
+         version="1.5.0.201505271423"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.mat.dtfj"
+         download-size="123"
+         install-size="270"
+         version="1.5.0.201505271423"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.mat.ibmdumps"
+         download-size="45"
+         install-size="81"
+         version="1.5.0.201505271423"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.mat.jruby.resolver"
+         download-size="20"
+         install-size="35"
+         version="1.5.0.201505271423"
+         unpack="false"/>
+
+</feature>
