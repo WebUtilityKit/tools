@@ -1,0 +1,12 @@
+!SESSION 2015-12-16 23:02:46.683 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -data /home/russell/dev/tools/eclipse/workspaces/facebook -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY com.atlassian.connector.eclipse.monitor.core 4 0 2015-12-17 10:23:07.674
+!MESSAGE There was an error uploading the 9b171393-b669-470e-83b2-d54f257c2a0b.6675986070336429917.zip: 
+HTTP Response Code 404
+Please try again later
