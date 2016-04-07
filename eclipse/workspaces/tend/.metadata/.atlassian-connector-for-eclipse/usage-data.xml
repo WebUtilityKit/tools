@@ -1,0 +1,91 @@
+<interactionEvent>
+  <kind>PREFERENCE</kind>
+  <date>2016-04-07 14:19:57.549 PDT</date>
+  <pluginId>com.atlassian.connector.eclipse.monitor.core</pluginId>
+  <eventId>system info: os-arch</eventId>
+  <details>x86_64</details>
+</interactionEvent><interactionEvent>
+  <kind>PREFERENCE</kind>
+  <date>2016-04-07 14:19:57.613 PDT</date>
+  <pluginId>com.atlassian.connector.eclipse.monitor.core</pluginId>
+  <eventId>system info: os</eventId>
+  <details>linux</details>
+</interactionEvent><interactionEvent>
+  <kind>PREFERENCE</kind>
+  <date>2016-04-07 14:19:57.614 PDT</date>
+  <pluginId>com.atlassian.connector.eclipse.monitor.core</pluginId>
+  <eventId>system info: org.eclipse.core.runtime</eventId>
+  <details>3.10.0.v20140318-2214</details>
+</interactionEvent><interactionEvent>
+  <kind>PREFERENCE</kind>
+  <date>2016-04-07 14:19:57.615 PDT</date>
+  <pluginId>com.atlassian.connector.eclipse.monitor.core</pluginId>
+  <eventId>system info: connector-version</eventId>
+  <details>3.2.5.v20150427</details>
+</interactionEvent><interactionEvent>
+  <kind>PREFERENCE</kind>
+  <date>2016-04-07 14:19:57.621 PDT</date>
+  <pluginId>com.atlassian.connector.eclipse.monitor.core</pluginId>
+  <eventId>system info: plugins</eventId>
+  <details>{jira.ui=3.2.5.v20150427, directclickthrough.ui=3.2.5.v20150427, jira.core=3.2.5.v20150427, monitor.ui=3.2.5.v20150427, commons.core=3.2.5.v20150427, branding.ui=3.2.5.v20150427, core=3.2.5.v20150427, help=3.2.5.v20150427, bamboo.core=3.2.5.v20150427, ui=3.2.5.v20150427, bamboo.ui=3.2.5.v20150427, monitor.core=3.2.5.v20150427, commons.ui=3.2.5.v20150427}</details>
+</interactionEvent><interactionEvent>
+  <kind>PREFERENCE</kind>
+  <date>2016-04-07 14:30:04.691 PDT</date>
+  <pluginId>com.atlassian.connector.eclipse.monitor.core</pluginId>
+  <eventId>system info: os-arch</eventId>
+  <details>x86_64</details>
+</interactionEvent><interactionEvent>
+  <kind>PREFERENCE</kind>
+  <date>2016-04-07 14:30:04.715 PDT</date>
+  <pluginId>com.atlassian.connector.eclipse.monitor.core</pluginId>
+  <eventId>system info: os</eventId>
+  <details>linux</details>
+</interactionEvent><interactionEvent>
+  <kind>PREFERENCE</kind>
+  <date>2016-04-07 14:30:04.716 PDT</date>
+  <pluginId>com.atlassian.connector.eclipse.monitor.core</pluginId>
+  <eventId>system info: org.eclipse.core.runtime</eventId>
+  <details>3.10.0.v20140318-2214</details>
+</interactionEvent><interactionEvent>
+  <kind>PREFERENCE</kind>
+  <date>2016-04-07 14:30:04.717 PDT</date>
+  <pluginId>com.atlassian.connector.eclipse.monitor.core</pluginId>
+  <eventId>system info: connector-version</eventId>
+  <details>3.2.5.v20150427</details>
+</interactionEvent><interactionEvent>
+  <kind>PREFERENCE</kind>
+  <date>2016-04-07 14:30:04.718 PDT</date>
+  <pluginId>com.atlassian.connector.eclipse.monitor.core</pluginId>
+  <eventId>system info: plugins</eventId>
+  <details>{jira.ui=3.2.5.v20150427, directclickthrough.ui=3.2.5.v20150427, jira.core=3.2.5.v20150427, monitor.ui=3.2.5.v20150427, commons.core=3.2.5.v20150427, branding.ui=3.2.5.v20150427, core=3.2.5.v20150427, help=3.2.5.v20150427, bamboo.core=3.2.5.v20150427, ui=3.2.5.v20150427, bamboo.ui=3.2.5.v20150427, monitor.core=3.2.5.v20150427, commons.ui=3.2.5.v20150427}</details>
+</interactionEvent><interactionEvent>
+  <kind>PREFERENCE</kind>
+  <date>2016-04-07 15:03:07.212 PDT</date>
+  <pluginId>com.atlassian.connector.eclipse.monitor.core</pluginId>
+  <eventId>system info: os-arch</eventId>
+  <details>x86_64</details>
+</interactionEvent><interactionEvent>
+  <kind>PREFERENCE</kind>
+  <date>2016-04-07 15:03:07.223 PDT</date>
+  <pluginId>com.atlassian.connector.eclipse.monitor.core</pluginId>
+  <eventId>system info: os</eventId>
+  <details>linux</details>
+</interactionEvent><interactionEvent>
+  <kind>PREFERENCE</kind>
+  <date>2016-04-07 15:03:07.230 PDT</date>
+  <pluginId>com.atlassian.connector.eclipse.monitor.core</pluginId>
+  <eventId>system info: org.eclipse.core.runtime</eventId>
+  <details>3.10.0.v20140318-2214</details>
+</interactionEvent><interactionEvent>
+  <kind>PREFERENCE</kind>
+  <date>2016-04-07 15:03:07.231 PDT</date>
+  <pluginId>com.atlassian.connector.eclipse.monitor.core</pluginId>
+  <eventId>system info: connector-version</eventId>
+  <details>3.2.5.v20150427</details>
+</interactionEvent><interactionEvent>
+  <kind>PREFERENCE</kind>
+  <date>2016-04-07 15:03:07.270 PDT</date>
+  <pluginId>com.atlassian.connector.eclipse.monitor.core</pluginId>
+  <eventId>system info: plugins</eventId>
+  <details>{jira.ui=3.2.5.v20150427, directclickthrough.ui=3.2.5.v20150427, jira.core=3.2.5.v20150427, monitor.ui=3.2.5.v20150427, commons.core=3.2.5.v20150427, branding.ui=3.2.5.v20150427, core=3.2.5.v20150427, help=3.2.5.v20150427, bamboo.core=3.2.5.v20150427, ui=3.2.5.v20150427, bamboo.ui=3.2.5.v20150427, monitor.core=3.2.5.v20150427, commons.ui=3.2.5.v20150427}</details>
+</interactionEvent>

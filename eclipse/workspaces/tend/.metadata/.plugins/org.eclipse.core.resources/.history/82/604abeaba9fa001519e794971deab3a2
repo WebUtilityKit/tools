@@ -1,0 +1,231 @@
+package com.wut.support.settings;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.wut.support.domain.DomainUtils;
+import com.wut.support.logging.WutLogger;
+
+public class ClientSettings extends Settings {
+	private static WutLogger logger = WutLogger.create(SettingsManager.class);
+	private String client;
+	private Map<String,String> settings = new HashMap<String,String>();
+	
+	public ClientSettings(String client) {
+		this.client = client;
+	}
+	
+	@Override
+	public String getSetting(String name) {
+		return settings.get(name);
+	}
+
+	@Override
+	public void putSetting(String name, String value) {
+		settings.put(name, value);
+	}
+	
+	public static Map<String,ClientSettings> getDefaults() {
+		Map<String,ClientSettings> defaults = new HashMap<String,ClientSettings>();
+		
+		//setAllSettings("beta.secretsaviors.com", "stripe", "", "sk_live_UM2tc23B5s9TSWPeD3XJ55sS", "", "support@secretsaviors.com");
+		//setAllSettings("secretsaviors.com", "stripe", "", "sk_live_UM2tc23B5s9TSWPeD3XJ55sS", "", "support@secretsaviors.com");
+
+		//setAllSettings("cleverhen.com", "braintree", "m4wj4w59pf7mvdyn", "8j6nsmy4czp9fghm", "31756c0c382afa11f449da22205b060d", "support@cleverhen.com", "smtp.sendgrid.net", "587", "cleverhenfoods", "btH3nhous3", "79640172");
+		//setAllSettings("beta.cleverhen.com", "braintree", "m4wj4w59pf7mvdyn", "8j6nsmy4czp9fghm", "31756c0c382afa11f449da22205b060d", "support@cleverhen.com", "smtp.sendgrid.net", "587", "cleverhenfoods", "btH3nhous3", "79640172");
+
+		createClient(defaults, setAllSettings("retailkit.com", "stripe", "", "sk_live_TukhpM0QWyzR94SIvus0K8uA", "", "support@retailkit.com", "smtp.mailgun.org", "587", "postmaster@rs8342.mailgun.org",  "8k-0cziu55g7", "81365609"));
+		createClient(defaults, setAllSettings("beta.retailkit.com", "stripe", "", "sk_test_q6jpEB3qjQvSYVgns7lOwq2J", "", "support@retailkit.com", "smtp.mailgun.org", "587", "postmaster@rs8342.mailgun.org",  "8k-0cziu55g7", "81365609"));
+		createClient(defaults, setAllSettings("dev.retailkit.com", "stripe", "", "sk_test_q6jpEB3qjQvSYVgns7lOwq2J", "", "support@retailkit.com",  "smtp.mailgun.org", "587", "postmaster@rs8342.mailgun.org",  "8k-0cziu55g7", "81365609"));
+		createClient(defaults, setAllSettings("demo.retailkit.com", "stripe", "", "sk_test_q6jpEB3qjQvSYVgns7lOwq2J", "", "support@retailkit.com",  "smtp.mandrillapp.com", "587", "rpalmite@gmail.com",  "hh5iVkW_VPi5YapUTy4wqg", "91739917"));
+		createClient(defaults, setAllSettings("demo.retailkit.com", "stripe", "", "sk_test_q6jpEB3qjQvSYVgns7lOwq2J", "", "support@retailkit.com", "smtp.mailgun.org", "587", "postmaster@rs8342.mailgun.org",  "8k-0cziu55g7", "81365609"));
+		createClient(defaults, setAllSettings("admin.retailkit.com", "stripe", "", "sk_test_q6jpEB3qjQvSYVgns7lOwq2J", "", "support@retailkit.com", "smtp.mailgun.org", "587", "postmaster@rs8342.mailgun.org",  "8k-0cziu55g7", "82220437"));
+		
+		createClient(defaults, setAllSettings("beta.growbetterveggies.com", "braintree", "xp8qsvx85cc55779", "cp692mmbt8759thn", "dcc1055cb82616192327077e47e024cd", "support@growbetterveggies.com", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "92967526"));
+		//setAllSettings("growbetterveggies.com", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "support@growbetterveggies.com", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "92967526");
+		createClient(defaults, setAllSettings("www.growbetterveggies.com", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "support@growbetterveggies.com", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "92967526"));
+		createClient(defaults, setAllSettings("beta.veggies.retail.rocks", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "support@veggies.retail.rocks", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "92967526"));
+		createClient(defaults, setAllSettings("veggies.retail.rocks", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "support@veggies.retail.rocks", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "92967526"));
+
+		createClient(defaults, setAllSettings("www.tend.co", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "hello@tend.co", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "101015280"));
+		createClient(defaults, setAllSettings("beta.tend.co", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "hello@tend.co", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "101015280"));
+		createClient(defaults, setAllSettings("dev.tend.co", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "hello@tend.co", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "101015280"));
+		createClient(defaults, setAllSettings("dev1.tend.co", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "hello@tend.co", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "101015280"));
+		createClient(defaults, setAllSettings("dev2.tend.co", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "hello@tend.co", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "101015280"));
+		createClient(defaults, setAllSettings("dev3.tend.co", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "hello@tend.co", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "101015280"));
+		createClient(defaults, setAllSettings("demo.tend.co", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "hello@tend.co", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "101015280"));
+
+		createClient(defaults, setAllSettings("www.tend.ag", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "hello@tend.ag", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "101015280"));
+		createClient(defaults, setAllSettings("beta.tend.ag", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "hello@tend.ag", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "101015280"));
+		createClient(defaults, setAllSettings("dev.tend.ag", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "hello@tend.ag", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "101015280"));
+		createClient(defaults, setAllSettings("dev1.tend.ag", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "hello@tend.ag", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "101015280"));
+		createClient(defaults, setAllSettings("dev2.tend.ag", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "hello@tend.ag", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "101015280"));
+		createClient(defaults, setAllSettings("dev3.tend.ag", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "hello@tend.ag", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "101015280"));
+		createClient(defaults, setAllSettings("demo.tend.ag", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "hello@tend.ag", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "101015280"));
+		createClient(defaults, setAllSettings("test.tend.ag", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "hello@tend.ag", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "101015280"));
+
+		createClient(defaults, createThemeSettings("lancelot.theme.tend.ag"));
+		createClient(defaults, createThemeSettings("hakurei.theme.tend.ag"));
+		createClient(defaults, createThemeSettings("rustic.theme.tend.ag"));
+		createClient(defaults, createThemeSettings("nautic.theme.tend.ag"));
+		createClient(defaults, createThemeSettings("master.theme.tend.ag"));
+		createClient(defaults, createThemeSettings("kennebec.theme.tend.ag"));
+		createClient(defaults, createThemeSettings("lockewood.theme.tend.ag"));
+		createClient(defaults, createThemeSettings("escargrow.theme.tend.ag"));
+		createClient(defaults, createThemeSettings("tend.theme.tend.ag"));
+		createClient(defaults, createThemeSettings("groundswell.theme.tend.ag"));
+
+//		createClient(defaults, createThemeSettings("hakurei.theme.tend.ag", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "hello@tend.ag", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "101015280"));
+//		createClient(defaults, createThemeSettings("rustic.theme.tend.ag", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "hello@tend.ag", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "101015280"));
+//		createClient(defaults, createThemeSettings("nautic.theme.tend.ag", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "hello@tend.ag", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "101015280"));
+//		createClient(defaults, createThemeSettings("master.theme.tend.ag", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "hello@tend.ag", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "101015280"));
+//		createClient(defaults, createThemeSettings("kennebec.theme.tend.ag", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "hello@tend.ag", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "101015280"));
+		
+		createClient(defaults, setAllSettings("theme.tend.co", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "hello@tend.co", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "101015280"));
+		
+		createClient(defaults, setAllSettings("www.groundswellfarmsantacruz.com", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "support@groundswellfarmsantacruz.com", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "101015280"));
+
+		createClient(defaults, setAllSettings("www.hawkshaven.farm", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "support@hawkshaven.farm", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "101015280"));
+		
+		createClient(defaults, setAllSettings("www.roosterridgefarmaptos.com", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "support@roosterridgefarmaptos.com", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "106010354"));
+
+		createClient(defaults, setAllSettings("www.lockewoodacres.com", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "support@lockewoodacres.com", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "106010354"));
+		
+		createClient(defaults, setAllSettings("www.benaroyafamilyfarm.com", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "support@benaroyafamilyfarm.com", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "106010354"));
+		
+		createClient(defaults, setAllSettings("www.oldhousefarm.net", "braintree", "dt53wfn5cx2c9zs8", "6c7vx3jv5xpvkh65", "b219edec529272f523820db5a97f788d", "support@oldhousefarm.net", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "106010354"));
+
+		createClient(defaults, setAllSettings("www.escargrowfarms.com", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "support@escargrowfarms.com", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "106010354"));
+
+		createClient(defaults, setAllSettings("www.everlasting-garden.com", "braintree", "mj4zpb5dd4nvsr3h", "bmnh4fkshwrd79rw", "d39d09671b0e4a32673e1537ff17abd3", "support@everlasting-garden.com", "smtp.sendgrid.net",  "2525", "retailkit",  "r3t41lr0ck5", "106010354"));
+
+		createClient(defaults, newClientSettings("www.redearthgardens.com"));
+		createClient(defaults, newClientSettings("www.mahoniagardens.com"));
+		createClient(defaults, newClientSettings("www.lolasonoma.com"));
+		createClient(defaults, newClientSettings("www.strong.ag"));
+		createClient(defaults, newClientSettings("www.cluckandtrowel.com"));
+		createClient(defaults, newClientSettings("www.riverstoneorganicfarm.com"));
+		createClient(defaults, newClientSettings("www.openhandsfarm.com"));
+		createClient(defaults, newClientSettings("www.vidaverdefarm.com"));
+
+		WEEK 9 — CLUTTERFREE HABIT IDEAS
+
+		/*
+		www.redearthgardens.com
+		www.mahoniagardens.com
+		www.lolasonoma.com
+		www.strong.ag
+		www.cluckandtrowel.com
+		www.riverstoneorganicfarm.com
+		www.openhandsfarm.com
+		www.vidaverdefarm.com
+		*/
+
+		
+		return defaults;
+	}
+	
+	private static void createClient(Map<String,ClientSettings> defaults, ClientSettings settings) {
+		String domain = settings.getSetting("domain");
+		defaults.put(domain, settings);
+	}
+	
+	private static ClientSettings newClientSettings(String domain) {
+		ClientSettings cs = createThemeSettings(domain);
+		
+		cs.putSetting("git.repository", "https://rpalmite:wertwas@bitbucket.org/rpalmite/frontend.git");
+		
+		return cs;
+	}
+	
+	// TODO branch not needed
+	private static ClientSettings createThemeSettings(String domain) {
+		ClientSettings cs = setAllSettings(domain, 
+				                           "braintree", 
+				                           "mj4zpb5dd4nvsr3h", 
+				                           "bmnh4fkshwrd79rw", 
+				                           "d39d09671b0e4a32673e1537ff17abd3", 
+				                           "support@" + domain, 
+				                           "smtp.sendgrid.net",  
+				                           "2525", 
+				                           "retailkit",  
+				                           "r3t41lr0ck5", 
+				                           "106010354");
+		
+		// https://rpalmite@bitbucket.org/tendco/themes.git
+		
+		cs.putSetting("git.repository", "https://rpalmite:wertwas@bitbucket.org/tendco/themes.git");
+		cs.putSetting("git.branch", domain);
+		
+		return cs;
+	}
+
+	
+	private static ClientSettings setAllSettings(String domain, String paymentProcessor, String merchantId, String publicKey, String privateKey, 
+			String emailAdderss, String emailSmtpServer, String emailSmtpPort, 
+			String emailUsername, String emailPassword, String googleAnalyticsView) {
+		
+		ClientSettings settings = new ClientSettings(domain);
+		try {
+			logger.info("SETTINGS: customer " + domain);
+
+			// payment processor
+			settings.putSetting("payment-processor", paymentProcessor);
+			if (paymentProcessor.equalsIgnoreCase("stripe")) {
+				settings.putSetting("stripe-live-api-key", publicKey); // TODO not used
+				settings.putSetting("stripe-api-key", publicKey);
+				settings.putSetting("stripe-test-api-key", "<stripe>"); // TODO not used
+			} else if (paymentProcessor.equalsIgnoreCase("braintree")) {
+				settings.putSetting("braintree-mechant-id", merchantId);
+				settings.putSetting("braintree-public-key", publicKey);
+				settings.putSetting("braintree-private-key", privateKey);
+			}
+			
+			logger.info("SETTINGS: after payment processing");
+
+	//		settings.putSetting("email-from-address", emailAdderss);
+	//		settings.putSetting("email-provider", emailProvider);
+	//		settings.putSetting("email-provider-username", emailUsername);
+	//		settings.putSetting("email-provider-password", emailPassword);
+			
+			// email
+			settings.putSetting("email-from-address", emailAdderss);
+			settings.putSetting("email-domain", domain);
+			settings.putSetting("email-smtp-host", emailSmtpServer);
+			settings.putSetting("email-smtp-port", emailSmtpPort);
+			settings.putSetting("email-provider-password", emailPassword); // old
+			settings.putSetting("email-username", emailUsername);
+			settings.putSetting("email-password", emailPassword);
+			
+			String realDomain = DomainUtils.getRealDomain(domain);
+			logger.info("SETTINGS: real domain " + realDomain);
+			settings.putSetting("password-reset-link", "https://" + realDomain + "/account.html?");
+			
+			settings.putSetting("domain", domain);
+	
+			String topLevelDomain = DomainUtils.getTopLevelDomain(domain);
+			settings.putSetting("top-level-domain", topLevelDomain);
+	
+			//String realDomain = getRealDomain(domain);
+			//settings.putSetting("password-reset-link", "https://" + realDomain + "/account.html?");
+			
+			// git
+			logger.info("SETTINGS: before git");
+			settings.putSetting("git.repository", "https://rpalmite:wertwas@bitbucket.org/rpalmite/frontend.git");
+			settings.putSetting("git.branch", domain);
+			settings.setDirectorySetting("client.code.dir", SystemSettings.getInstance().getSetting("code.dir") + domain);
+			logger.info("SETTINGS: after client code dir set");
+			settings.setDirectorySetting("client.site.dir", SystemSettings.getInstance().getSetting("site.dir") + domain);
+			logger.info("SETTINGS: after git");
+
+			//analytics
+			settings.putSetting("google-analytics-view", googleAnalyticsView);
+			
+		} catch (Exception e) {
+			logger.info("Error initializing settings for " + domain);
+		}
+		return settings;
+	}
+	
+	
+}

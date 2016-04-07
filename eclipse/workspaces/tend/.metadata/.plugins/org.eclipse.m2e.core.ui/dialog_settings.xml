@@ -14,6 +14,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/home/russell/dev/webutilitykit-server/settings"/>
 			<item value="/home/russell/dev/webutilitykit-server"/>
 		</list>
 		<list key="projectNameTemplate">

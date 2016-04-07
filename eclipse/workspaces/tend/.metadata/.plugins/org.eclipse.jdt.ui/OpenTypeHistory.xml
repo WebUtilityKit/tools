@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=core/src\/main\/java&lt;com.wut.support.settings{ClientSettings.java[ClientSettings" modifiers="1" timestamp="1449631161000"/>
+<typeInfo handle="=core/src\/main\/java&lt;com.wut.model.stream{Base64StreamData.java[Base64StreamData" modifiers="1" timestamp="1460063344000"/>
+<typeInfo handle="=storage/src\/main\/java&lt;com.wut.datasources.cassandra{CassandraSource.java[CassandraSource" modifiers="1" timestamp="1458170128000"/>
+<typeInfo handle="=core/src\/main\/java&lt;com.wut.support.settings{SettingsManager.java[SettingsManager" modifiers="1" timestamp="1447969045000"/>
+<typeInfo handle="=core/src\/main\/java&lt;com.wut.support.settings{ClientSettings.java[ClientSettings" modifiers="1" timestamp="1460064698000"/>
 </typeInfoHistroy>

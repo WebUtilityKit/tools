@@ -1,0 +1,9 @@
+192.168.122.1 - - [21/Mar/2016:16:02:05 -0700] "GET / HTTP/1.1" 404 951
+127.0.0.1 - - [21/Mar/2016:16:02:05 -0700] "GET / HTTP/1.1" 404 951
+192.168.122.1 - - [21/Mar/2016:16:02:06 -0700] "GET /favicon.ico HTTP/1.1" 404 973
+192.168.122.1 - - [21/Mar/2016:16:02:09 -0700] "GET / HTTP/1.1" 404 951
+172.31.98.127 - - [21/Mar/2016:16:02:14 -0700] "GET / HTTP/1.1" 404 951
+172.31.98.127 - - [21/Mar/2016:16:02:14 -0700] "GET /favicon.ico HTTP/1.1" 404 973
+172.31.98.127 - - [21/Mar/2016:16:02:58 -0700] "GET / HTTP/1.1" 404 951
+172.31.98.127 - - [21/Mar/2016:16:02:58 -0700] "GET /favicon.ico HTTP/1.1" 404 973
+127.0.0.1 - - [21/Mar/2016:16:08:39 -0700] "POST /code/template?token=%27public%27&id=%27simpleTest.js%27&customerId=%27dev3.tend.ag%27&userId=%27public%27&operation=%27read%27&visibility=%27owner%27&application=%27test%27&noCache=%27true%27&format=%27json%27 HTTP/1.1" 200 1013
